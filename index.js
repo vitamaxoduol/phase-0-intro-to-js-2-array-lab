@@ -1,45 +1,30 @@
 // Write your solution here!
 let cats = ["Milo", "Otis", "Garfield"];
 
-function beforeEach() {
-    cats.length = 0;
-    cats.push('Milo', 'Otis', 'Garfield')
-    console.log(cats);
-}
-beforeEach();
-
-
 function destructivelyAppendCat(name) {
-    let cats = ["Milo", "Otis", "Garfield"];
-    cats.push(name);
-    
+    let newCat = (cats.push(name))
+    return newCat
 }
-destructivelyAppendCat("Ralph");
-console.log(cats);
+// destructivelyAppendCat("Ralph");
 
 
 function destructivelyPrependCat(name) {
-    let cats = ["Milo", "Otis", "Garfield"];
-    cats.unshift(name);
-    console.log(cats);
+    let newCat = (cats.unshift(name));
+    return newCat;
 }
-destructivelyPrependCat("Bob")
+// destructivelyPrependCat("Bob")
 
-function destructivelyRemoveLastCat() {
-    let cats = ["Milo", "Otis", "Garfield"];
-    cats.pop();
-    console.log(cats);
+function destructivelyRemoveLastCat(name) {
+    let newCat = (cats.pop(name));
+    return newCat
 }
-destructivelyRemoveLastCat("Garfield");
+// destructivelyRemoveLastCat("Garfield");
 
-function destructivelyRemoveFirstCat() {
-    let cats = ["Milo", "Otis", "Garfield"];
-    cats.shift();
-    console.log(cats);
+function destructivelyRemoveFirstCat(name) {
+   let newCat = (cats.shift(name));
+    return newCat;
 }
-destructivelyRemoveFirstCat("Milo");
-
-
+// destructivelyRemoveFirstCat("Milo");
 
 function appendCat(name) {
     let cats = ["Milo", "Otis", "Garfield"];
@@ -51,7 +36,6 @@ console.log(newCatBroom); // Output: ["Milo", "Otis", "Garfield", "Broom"]
 
 
 function prependCat(name) {
-    let cats = ["Milo", "Otis", "Garfield"];
     let newCats = [name, ...cats];
     return newCats;
 }
@@ -60,7 +44,6 @@ let newCatName = prependCat("Arnold");
 console.log(newCatName); // Output: ["Arnold", "Milo", "Otis", "Garfield"]
 
 function removeLastCat() {
-    let cats = ["Milo", "Otis", "Garfield"];
     let newCats = cats.slice(0, -1);
     return newCats;
 }
@@ -68,7 +51,6 @@ let newCatArray = removeLastCat();
 console.log(newCatArray); // Output: ["Milo", "Otis"]
 
 function removeFirstCat() {
-    let cats = ["Milo", "Otis", "Garfield"];
     let newCats = cats.slice(1);
     return newCats;
 }
